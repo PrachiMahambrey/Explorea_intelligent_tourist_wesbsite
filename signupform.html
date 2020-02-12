@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Sign Up</title>
+<meta name="keywords" content="Sign Up Form" />
+<style type="text/css">
+#container
+{
+ text-align:center;
+ font-size:22px;
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url(ajanta1.jpg);
+ background-attachment: fixed;
+ background-size: cover;
+ color:white;
+}
+
+form input[type="text"],
+            form input[type="password"],
+            form input[type="email"] {width:270px; padding:30;}
+
+
+form label 
+{
+display:inline-block;
+}
+
+</style>
+<div class="details">
+
+<script src="form2.js"></script>
+</head>
+<body id="container" onload="document.registration.userid.focus();">
+
+<?php
+$conn = new mysqli("localhost:8080", "root","", "explorea");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$username=$_POST["username"];
+$password=$_POST["passid"];
+$address=$_POST["address"];
+$country=$_POST["country"];
+$zip=$_POST["zip"];
+$email=$_POST["email"];
+$gender=$_POST["sex"];
+$lang=$_POST["lang"];
+$about=$_POST["desc"];
+
+
+$sql = mysqli_query($conn,"INSERT INTO userdata (u_password,u_name,u_adress,u_country,u_zipcode,u_email,u_sex,u_language,u_about) values ('password','username','address','country','zip','email','gender','lang','about')") or die( mysqli_error($conn));;
+
+    $row = mysqli_fetch_array($result,MYSQLI_BOTH);
+
+    $count= mysqli_num_rows($result);
+
+if($count==1){
+    $_SESSION['user']=$email;
+}
+else
+    echo $row["email"]."Email and Password do not match. Please try again!";
+
+if($email=='admin@gmail.com')
+    header("Refresh: 0; URL= admin.html");
+else
+    header("Refresh: 0; URL= home.php");
+$conn->close();
+
+?>
+
+        <h1 align="center" style = "color: rgb(247, 231, 12); font-size:100px; font-family: 'Courier New', Courier, monospace";><b><i>SIGN UP</i></b></h1>
+<h1 align ="center" style = "color:turquoise; background-color: black; font-size: 50px ; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";>Registration Form</h1>
+<form name='registration'  onSubmit="return formValidation();">
+<label for="passid"><b><i><h4>Password: </h4></b></i></label>
+<br>
+<input type="password" name="passid" size="20" />
+<br>
+<label for="username"><b><i><h4>Name: </h4></i></b></label>
+<br>
+<input type="text" name="username" placeholder="Enter your full name." size="50" />
+<br>
+<label for="address"><b><i><h4>Address: </h4></i></b></label>
+<br>
+<input type="text" name="address" size="50" />
+<br>
+<label for="country"><b><i><h4>Country: </h4></i></b></label>
+<br>
+<select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select>
+<br>
+<label for="zip"><b><i><h4>ZIP Code: </h4></i></b></label>
+<br>
+<input type="text" name="zip" />
+<br>
+<label for="email"><b><i><h4>Email: </h4></i></b></label>
+<br>
+<input type="text" name="email" placeholder="Eg. joe@abc.com "size="50" />
+<br>
+<label id="gender"><b><i><h4>Sex: </h4></i></b></label>
+<br>
+<input type="radio" name="sex" value="Male" /><span>Male</span>
+<input type="radio" name="sex" value="Female" /><span>Female</span>
+<br>
+<br>
+<label><b><i><h4>Language: </h4></i></b></label>
+<br>
+<input type="checkbox" name="lang" value="en" checked /><span>English</span>
+<input type="checkbox" name="lang" value="noen" /><span>Hindi</span>
+<br>
+<label for="desc"><b><i><h4>About: </h4></i></b></label>
+<br>
+<textarea name="desc" placeholder="Describe yourself!" style = "color: black; font-size:20px; font-family: arial"; id="desc"></textarea>
+<br>
+<br>
+<br>
+<br>
+<input type="submit" name="submit"  value="Submit" style = "color: white; background-color: black; font-size:24px; font-family: arial";/>
+<br>
+<h2>OR</h2>
+<br>
+<button type="reset" value="Reset"  style = "color: white; background-color: black; font-size:24px; font-family: arial"; >Reset</button>
+<br>
+<br>
+</form>
+</div>
+</body>
+</html>

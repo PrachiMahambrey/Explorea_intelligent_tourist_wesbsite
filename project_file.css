@@ -1,0 +1,130 @@
+body{
+background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(mizoram.jpg);
+background-attachment: fixed;
+background-size: cover;
+}
+
+.title1{
+text-align:center;
+font-family:monospace;
+color:white;
+font-size:30px;
+}
+
+.chart1{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(tadoba1.jpeg);
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart2{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(tawang2.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart3{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(nubra.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart4{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(shillong.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart5{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(srinagar.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart6{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(kerala1.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart7{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(nicobar.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart8{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(gangtok.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+.chart9{
+ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(akshaichin.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+ color:white;
+ background-repeat:repeat;
+ border-style:solid;
+ border-color:black;
+ border-width:4px;
+ border-radius:0px;
+}
+
+    #f1{
+ font:bold  22px Times New Roman;
+ color:white;
+}	
+
+   #f2{
+ font: bold italic 34px monospace;
+ text-align:center;
+ color:white;
+}		
